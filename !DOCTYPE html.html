@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ABCD International School</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2d9f6b56c.js" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --primary: #00bcd4;
+      --dark-bg: #121212;
+      --lighter-bg: #1e1e1e;
+      --text-light: #f5f5f5;
+      --text-muted: #999;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--dark-bg);
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--lighter-bg);
+      padding: 30px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--primary);
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+    }
+
+    nav {
+      background-color: #0a0a0a;
+      display: flex;
+      justify-content: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: var(--text-light);
+      padding: 15px 20px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background-color: var(--primary);
+      color: #000;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: var(--primary);
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 8px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      padding: 14px;
+      border: 1px solid #333;
+      background-color: var(--lighter-bg);
+    }
+
+    th {
+      background-color: #222;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 20px rgba(0, 188, 212, 0.2);
+    }
+
+    footer {
+      background: #0a0a0a;
+      text-align: center;
+      padding: 25px;
+      color: var(--text-muted);
+    }
+
+    footer i {
+      margin: 0 8px;
+      cursor: pointer;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+
+      .card {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ABCD International School</h1>
+    <p>Inspiring Excellence, Building the Future</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#teachers">Teachers</a>
+    <a href="#fees">Fees</a>
+    <a href="#admissions">Admissions</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2><i class="fas fa-school"></i> About Us</h2>
+    <p>Founded in 2010, ABCD International School is a center of excellence in education. Our mission is to shape well-rounded students with a love for learning, innovation, and strong character values in a safe and inclusive environment.</p>
+  </section>
+
+  <section id="teachers">
+    <h2><i class="fas fa-chalkboard-teacher"></i> Our Teachers</h2>
+    <div class="card-grid">
+      <div class="card">👨‍🏫 Mr. Arjun Sharma<br><small>Mathematics</small></div>
+      <div class="card">👩‍🏫 Ms. Divya Kapoor<br><small>English</small></div>
+      <div class="card">🧪 Mr. Farhan Ali<br><small>Science</small></div>
+      <div class="card">📚 Ms. Sunita Verma<br><small>Social Studies</small></div>
+      <div class="card">📝 Ms. Neha Singh<br><small>Hindi</small></div>
+      <div class="card">🏃‍♂️ Mr. Rakesh Nair<br><small>Physical Education</small></div>
+    </div>
+  </section>
+
+  <section id="fees">
+    <h2><i class="fas fa-wallet"></i> Fee Structure</h2>
+    <table>
+      <tr>
+        <th>Class</th>
+        <th>Tuition (Yearly)</th>
+        <th>Admission</th>
+        <th>Other</th>
+      </tr>
+      <tr>
+        <td>Nursery - UKG</td>
+        <td>₹20,000</td>
+        <td>₹3,000</td>
+        <td>₹1,500</td>
+      </tr>
+      <tr>
+        <td>Class 1 - 5</td>
+        <td>₹25,000</td>
+        <td>₹3,500</td>
+        <td>₹2,000</td>
+      </tr>
+      <tr>
+        <td>Class 6 - 8</td>
+        <td>₹28,000</td>
+        <td>₹4,000</td>
+        <td>₹2,500</td>
+      </tr>
+      <tr>
+        <td>Class 9 - 10</td>
+        <td>₹32,000</td>
+        <td>₹4,500</td>
+        <td>₹3,000</td>
+      </tr>
+    </table>
+  </section>
+
+  <section id="admissions">
+    <h2><i class="fas fa-user-plus"></i> Admissions</h2>
+    <p>Enroll for the 2025–26 session. We welcome learners who are curious, driven, and compassionate. Submit documents and meet our faculty through scheduled appointments.</p>
+    <ul>
+      <li>Birth Certificate</li>
+      <li>Previous Report Card</li>
+      <li>2 Passport-size Photos</li>
+      <li>Aadhar Card</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2><i class="fas fa-envelope"></i> Contact Us</h2>
+    <p><strong>Address:</strong> Sector 5, Knowledge Park, New Delhi, India</p>
+    <p><strong>Phone:</strong> +91-9876543210</p>
+    <p><strong>Email:</strong> contact@abcdinternationalschool.in</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ABCD International School</p>
+    <div>
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-linkedin-in"></i>
+    </div>
+  </footer>
+
+</body>
+</html>
